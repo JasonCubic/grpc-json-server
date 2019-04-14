@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package json;
+
+service JsonService {
+  rpc testSomething (JsonMessage) returns (JsonMessage) {}
+  rpc CreateSomething (JsonMessage) returns (JsonMessage) {}
+  rpc ReadSomething (JsonMessage) returns (JsonMessage) {}
+  rpc UpdateSomething (JsonMessage) returns (JsonMessage) {}
+  rpc DeleteSomething (JsonMessage) returns (JsonMessage) {}
+  rpc SomethingSomething (JsonMessage) returns (JsonMessage) {}
+  rpc OtherSomething (JsonMessage) returns (JsonMessage) {}
+}
+
+message JsonMessage {
+  string payload = 1;
+}
